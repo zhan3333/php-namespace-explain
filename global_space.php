@@ -14,6 +14,15 @@
  *  2. 兼容旧版本中无命名空间的写法
  */
 
+/**
+ * 命名空间中的类、函数、常量，可以看作文件系统中的文件
+ * 命名空间，相当于文件系统中的文件夹
+ */
+
+/**
+ * 当前命名空间为 / ： 全局空间
+ */
+
 // 全局空间中，定义一个类
 class User
 {
@@ -25,11 +34,14 @@ function get_name () {
     return 'test';
 }
 
+const MYNAME = '/';
+
 // 全局空间中，赋值一个变量
 $name = 'test';
 
 // 全局中，new一个对象
 $user = new User();
+$user = new \User();
 
 // 全局中，调用一个函数
 get_name();
@@ -46,7 +58,7 @@ echo strlen($name);
 // 不忽略全局标识
 \strlen($name);
 
-// 全局中，使用一个内置变量
+// 全局中，使用一个内置常量
 echo PHP_EOL;
 // 不忽略全局标识
 echo \PHP_EOL;

@@ -12,5 +12,5 @@ function get_name () {
 }
 
 class User {
-    public $name = 'App2';
+    public static $name = 'App2';
 }

@@ -18,6 +18,11 @@
  */
 
 /**
+ * 命名空间和文件系统不相关:
+ * 相同的命名空间，可以定义在不同的文件夹下
+ */
+
+/**
  * 接下来我们定义两个文件，空间分别为 App App2
  */
 
@@ -29,5 +34,5 @@ function get_name () {
 }
 
 class User {
-    public $name = 'App';
+    public static $name = 'App';
 }
